@@ -20,7 +20,7 @@ public:
     Form(sf::RenderWindow& window);
     void process_events(const sf::Event&);
     void add_button(std::shared_ptr<IWidget> button);
-    ConfigData& get_config();
+    ConfigData& config();
 };
 
 };

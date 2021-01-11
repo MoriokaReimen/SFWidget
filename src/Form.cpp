@@ -42,8 +42,8 @@ void Form::add_button(std::shared_ptr<IWidget> button)
     widgets_.push_back(button);
 }
 
-ConfigData& Form::get_config()
+ConfigData& Form::config()
 {
-    return config;
+    return sf::config;
 }
 };
