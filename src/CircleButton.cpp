@@ -18,16 +18,18 @@ CircleButton::~CircleButton()
 }
 
 /* call back evocation */
-void CircleButton::on_pressed() const
+void CircleButton::on_pressed()
 {
     if(on_pressed_call_back_)
     on_pressed_call_back_();
+    shape_.setFillColor(sf::Color::Red);
 }
 
-void CircleButton::on_released() const
+void CircleButton::on_released()
 {
     if(on_released_call_back_)
     on_released_call_back_();
+    shape_.setFillColor(sf::Color::White);
 }
 
 /* call back setter */
@@ -47,6 +49,6 @@ bool CircleButton::is_hovering(const sf::Vector2f& mouse_position) const
     auto inverse_transform = getInverseTransform();
     auto local_mouse_position = inverse_transform * mouse_position;
 
-    return shape_.getLocalBounds().contains(local_mouse_position);
+    return shape_.getGlobalBounds().contains(local_mouse_position);
 }
 };

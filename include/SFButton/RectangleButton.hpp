@@ -25,8 +25,8 @@ public:
     std::string get_text() const;
 
     /* call back evocation */
-    virtual void on_pressed() const override;
-    virtual void on_released() const override;
+    virtual void on_pressed() override;
+    virtual void on_released() override;
 
     /* call back setter */
     virtual void set_on_pressed_call_back(const std::function<void()>& func) override;

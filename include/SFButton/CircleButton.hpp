@@ -15,12 +15,12 @@ class CircleButton : public IWidget
 
     sf::CircleShape shape_;
 public:
-    explicit CircleButton(const float& radius = 20.0);
+    explicit CircleButton(const float& radius = 0.f);
     virtual ~CircleButton();
 
     /* call back evocation */
-    virtual void on_pressed() const override;
-    virtual void on_released() const override;
+    virtual void on_pressed() override;
+    virtual void on_released() override;
 
     /* call back setter */
     virtual void set_on_pressed_call_back(const std::function<void()>& func) override;

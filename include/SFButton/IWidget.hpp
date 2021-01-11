@@ -9,8 +9,8 @@ class IWidget : virtual public Drawable, virtual public Transformable
 public:
     virtual ~IWidget() {};
     /* call back evocation */
-    virtual void on_pressed() const = 0;
-    virtual void on_released() const = 0;
+    virtual void on_pressed() = 0;
+    virtual void on_released() = 0;
 
     /* call back setter */
     virtual void set_on_pressed_call_back(const std::function<void()>& func) = 0;

@@ -15,7 +15,7 @@ void RectangleButton::draw(RenderTarget &target, RenderStates states) const
 } 
 
 RectangleButton::RectangleButton(const sf::Vector2f& size)
-    : on_pressed_call_back_(), on_released_call_back_()
+    : on_pressed_call_back_(), on_released_call_back_(), shape_(size)
 {
     text_.setFont(config.font);
     text_.setFillColor(config.font_color);
@@ -37,14 +37,18 @@ std::string RectangleButton::get_text() const
 }
 
 /* call back evocation */
-void RectangleButton::on_pressed() const
+void RectangleButton::on_pressed()
 {
+    if(on_pressed_call_back_)
     on_pressed_call_back_();
+    shape_.setFillColor(sf::Color::Red);
 }
 
-void RectangleButton::on_released() const
+void RectangleButton::on_released()
 {
+    if(on_released_call_back_)
     on_released_call_back_();
+    shape_.setFillColor(sf::Color::White);
 }
 
 /* call back setter */
@@ -64,7 +68,7 @@ bool RectangleButton::is_hovering(const sf::Vector2f& mouse_position) const
     auto inverse_transform = getInverseTransform();
     auto local_mouse_position = inverse_transform * mouse_position;
 
-    return shape_.getLocalBounds().contains(local_mouse_position);
+    return shape_.getGlobalBounds().contains(local_mouse_position);
 }
 
 };

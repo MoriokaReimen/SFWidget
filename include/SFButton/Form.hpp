@@ -14,9 +14,10 @@ class Form : public sf::Drawable
     virtual void draw(RenderTarget &target, RenderStates states) const override; 
     std::vector<std::shared_ptr<IWidget>> widgets_;
     std::shared_ptr<ConfigData> config_;
+    sf::RenderWindow& window_;
 
 public:
-    Form();
+    Form(sf::RenderWindow& window);
     void process_events(const sf::Event&);
     void add_button(std::shared_ptr<IWidget> button);
     ConfigData& get_config();
