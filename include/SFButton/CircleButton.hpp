@@ -19,6 +19,10 @@ public:
     explicit CircleButton(const float& radius = 0.f);
     virtual ~CircleButton();
 
+    /* text handling */
+    void set_text(const std::string& text);
+    std::string get_text() const;
+
     /* call back evocation */
     virtual void on_pressed() override;
     virtual void on_released() override;
