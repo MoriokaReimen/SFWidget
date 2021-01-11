@@ -14,11 +14,12 @@ int main()
 
     sf::Form form(window);
     form.get_config().texture.loadFromFile("resource/Texture.png");
-    form.get_config().sprite_size = sf::Vector2u(50u, 50u);
-    form.get_config().font.loadFromFile("resource/ipaexm.ttf");
-    form.get_config().font_size = 30;
-    form.get_config().font_released_color = sf::Color(0, 150, 150);
-    form.get_config().font_pressed_color = sf::Color(0, 255, 255);
+    form.get_config().texture.setSmooth(true);
+    form.get_config().sprite_size = sf::Vector2u(100u, 100u);
+    form.get_config().font.loadFromFile("resource/digital-7.ttf");
+    form.get_config().font_size = 50;
+    form.get_config().font_released_color = sf::Color(0, 0, 0);
+    form.get_config().font_pressed_color = sf::Color(255, 191, 0);
 
     auto circle_button = std::make_shared<sf::CircleButton>(20.f);
     circle_button->set_on_pressed_call_back([](){std::cout << "Hello" << std::endl;});

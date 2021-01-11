@@ -8,9 +8,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="200"
-   height="200"
-   viewBox="0 0 52.916666 52.916666"
+   width="500"
+   height="500"
+   viewBox="0 0 132.29166 132.29166"
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (0767f8302a, 2020-10-17)"
@@ -30,10 +30,10 @@
     </linearGradient>
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : -95.583336 : 1"
-       inkscape:vp_y="0 : 999.99996 : 0"
-       inkscape:vp_z="210 : -95.583336 : 1"
-       inkscape:persp3d-origin="105 : -145.08333 : 1"
+       inkscape:vp_x="0 : -16.208336 : 1"
+       inkscape:vp_y="0 : 999.99992 : 0"
+       inkscape:vp_z="209.99999 : -16.208336 : 1"
+       inkscape:persp3d-origin="105 : -65.708329 : 1"
        id="perspective833" />
   </defs>
   <sodipodi:namedview
@@ -45,7 +45,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
      inkscape:cx="70.805638"
-     inkscape:cy="178.33924"
+     inkscape:cy="97.527037"
      inkscape:document-units="px"
      inkscape:current-layer="g870-6"
      inkscape:document-rotation="0"
@@ -64,7 +64,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -73,54 +73,35 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g870"
-       transform="matrix(0.26418845,0,0,0.26357748,0,8.9393683e-4)">
-      <rect
-         style="fill:#000000;fill-opacity:0;stroke:#009696;stroke-width:5.86761;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"
-         id="rect849"
-         width="44.132389"
-         height="44.132389"
-         x="2.933805"
-         y="2.933805" />
-      <rect
-         style="fill:#00ffff;fill-opacity:1;stroke:#00ffff;stroke-width:5.28084;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"
-         id="rect849-3"
-         width="39.719158"
-         height="39.719154"
-         x="5.14042"
-         y="5.14042" />
-    </g>
-    <g
        id="g870-6"
        transform="translate(12.585586,54.007681)">
       <rect
-         style="fill:#000000;fill-opacity:0;stroke:#00ffff;stroke-width:1.54836;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"
-         id="rect849-7"
-         width="11.659267"
-         height="11.632304"
-         x="1.3989151"
-         y="-53.233501" />
+         style="fill:#ffbf00;fill-opacity:1;stroke:#ffbf00;stroke-width:2.53205;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect841"
+         width="23.926281"
+         height="23.926287"
+         x="-11.319561"
+         y="-52.741657" />
       <rect
-         style="fill:#009696;fill-opacity:1;stroke:#009696;stroke-width:1.39352;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"
-         id="rect849-3-5"
-         width="10.493342"
-         height="10.469074"
-         x="1.981879"
-         y="-52.651886" />
+         style="fill:#000000;fill-opacity:1;stroke:#ffbf00;stroke-width:0.811933;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect841-3"
+         width="25.6464"
+         height="25.6464"
+         x="14.278712"
+         y="-53.601715" />
       <ellipse
-         style="fill:#009696;fill-opacity:1;stroke:#00ffff;stroke-width:0.699693;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-         id="path895"
-         cx="7.2285485"
-         cy="-34.238476"
-         rx="6.2544599"
-         ry="6.2399964" />
-      <ellipse
-         style="mix-blend-mode:color;fill:#00ffff;fill-opacity:1;stroke:#009696;stroke-width:0.699693;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-         id="path895-3"
-         cx="-5.9808745"
-         cy="-34.238476"
-         rx="6.2544599"
-         ry="6.2399964" />
+         style="fill:#ffbf00;fill-opacity:1;stroke:#ffbf00;stroke-width:1.25993;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path858"
+         cy="-14.320184"
+         cx="0.64357996"
+         rx="12.599205"
+         ry="12.599203" />
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:#ffbf00;stroke-width:0.807986;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="path858-6"
+         cy="-14.320183"
+         cx="27.101912"
+         r="12.825173" />
     </g>
   </g>
 </svg>
