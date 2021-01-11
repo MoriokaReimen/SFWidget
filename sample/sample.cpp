@@ -14,6 +14,7 @@ int main()
 
     sf::Form form(window);
     form.get_config().texture.loadFromFile("resource/Texture.png");
+    form.get_config().sprite_size = sf::Vector2u(50u, 50u);
     form.get_config().font.loadFromFile("resource/ipaexm.ttf");
     form.get_config().font_size = 30;
     form.get_config().font_released_color = sf::Color(0, 150, 150);
@@ -22,13 +23,13 @@ int main()
     auto circle_button = std::make_shared<sf::CircleButton>(20.f);
     circle_button->set_on_pressed_call_back([](){std::cout << "Hello" << std::endl;});
     circle_button->setPosition(500, 500);
-    circle_button->set_text("Hello");
+    circle_button->set_text("Hello!!");
     form.add_button(circle_button);
 
     auto rectangle_button = std::make_shared<sf::RectangleButton>(sf::Vector2f{200.f, 200.f});
     rectangle_button->set_on_pressed_call_back([](){std::cout << "Bye" << std::endl;});
     rectangle_button->setPosition(200, 200);
-    rectangle_button->set_text("Byte!!");
+    rectangle_button->set_text("Bye!!");
     form.add_button(rectangle_button);
 
     while (window.isOpen())

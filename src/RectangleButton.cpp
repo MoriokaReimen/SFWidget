@@ -27,7 +27,7 @@ RectangleButton::RectangleButton(const sf::Vector2f& size)
     if(config.texture.getSize() != sf::Vector2u(0u, 0u))
     {
         shape_.setTexture(&config.texture);
-        shape_.setTextureRect(sf::IntRect(0, 0, 50, 50));
+        shape_.setTextureRect(sf::IntRect(0, 0, config.sprite_size.x, config.sprite_size.y));
     }
 }
 
@@ -58,7 +58,7 @@ void RectangleButton::on_pressed()
     on_pressed_call_back_();
     if(config.texture.getSize() != sf::Vector2u(0u, 0u))
     {
-        shape_.setTextureRect(sf::IntRect(50, 0, 50, 50));
+        shape_.setTextureRect(sf::IntRect(config.sprite_size.y, 0, config.sprite_size.x, config.sprite_size.y));
     } else {
         shape_.setFillColor(sf::Color::Red);
     }
@@ -75,7 +75,7 @@ void RectangleButton::on_released()
     on_released_call_back_();
     if(config.texture.getSize() != sf::Vector2u(0u, 0u))
     {
-        shape_.setTextureRect(sf::IntRect(0, 0, 50, 50));
+        shape_.setTextureRect(sf::IntRect(0, 0, config.sprite_size.x, config.sprite_size.y));
     } else {
         shape_.setFillColor(sf::Color::White);
     }

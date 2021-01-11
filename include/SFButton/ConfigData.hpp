@@ -9,6 +9,8 @@ struct ConfigData
     sf::Color font_released_color;
     sf::Color font_pressed_color;
     unsigned int font_size;
+
     sf::Texture texture;
+    sf::Vector2u sprite_size;
 };
 };

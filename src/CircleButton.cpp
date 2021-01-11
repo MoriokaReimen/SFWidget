@@ -25,7 +25,7 @@ CircleButton::CircleButton(const float& radius)
     if(config.texture.getSize() != sf::Vector2u(0u, 0u))
     {
         shape_.setTexture(&config.texture);
-        shape_.setTextureRect(sf::IntRect(0, 50, 50, 50));
+        shape_.setTextureRect(sf::IntRect(0, config.sprite_size.x, config.sprite_size.x, config.sprite_size.y));
     }
 }
 
@@ -57,7 +57,7 @@ void CircleButton::on_pressed()
 
     if(config.texture.getSize() != sf::Vector2u(0u, 0u))
     {
-        shape_.setTextureRect(sf::IntRect(50, 50, 50, 50));
+        shape_.setTextureRect(sf::IntRect(config.sprite_size.x, config.sprite_size.y, config.sprite_size.x, config.sprite_size.y));
     } else {
         shape_.setFillColor(sf::Color::Red);
     }
@@ -75,7 +75,7 @@ void CircleButton::on_released()
 
     if(config.texture.getSize() != sf::Vector2u(0u, 0u))
     {
-        shape_.setTextureRect(sf::IntRect(0, 50, 50, 50));
+        shape_.setTextureRect(sf::IntRect(0, config.sprite_size.y, config.sprite_size.x, config.sprite_size.y));
     } else {
         shape_.setFillColor(sf::Color::White);
     }
