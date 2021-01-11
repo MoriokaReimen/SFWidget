@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IButton.hpp"
+#include "SFButton/IWidget.hpp"
 #include <memory>
 
 namespace sf
@@ -12,10 +12,10 @@ class CircleButton : public IWidget
     virtual void draw (RenderTarget &target, RenderStates states) const override; 
     std::function<void()> on_pressed_call_back_;
     std::function<void()> on_released_call_back_;
-    sf::CircleShape circle_;
 
+    sf::CircleShape shape_;
 public:
-    CircleButton();
+    explicit CircleButton(const float& radius = 20.0);
     virtual ~CircleButton();
 
     /* call back evocation */

@@ -14,6 +14,7 @@ int main()
     sf::Form form;
     auto button = std::make_shared<sf::CircleButton>();
     button->set_on_pressed_call_back([](){std::cout << "Hello" << std::endl;});
+    button->setPosition(500, 500);
     form.add_button(button);
 
     while (window.isOpen())

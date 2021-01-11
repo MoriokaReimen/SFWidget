@@ -1,6 +1,6 @@
 #include "SFButton/Form.hpp"
 #include "SFButton/ConfigData.hpp"
-#include "SFButton/IButton.hpp"
+#include "SFButton/IWidget.hpp"
 
 namespace sf
 {
@@ -24,7 +24,7 @@ void Form::process_events(const sf::Event& event)
 {
     for(const auto& button : widgets_)
     {
-        const auto& pos = sf::Vector2f(event.mouseMove.x, event.mouseMove.y);
+        const auto pos = sf::Vector2f(event.mouseButton.x, event.mouseButton.y);
         if(button->is_hovering(pos) and (event.type== event.MouseButtonPressed))
         {
             button->on_pressed();
