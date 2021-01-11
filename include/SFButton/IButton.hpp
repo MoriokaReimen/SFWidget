@@ -4,10 +4,10 @@
 
 namespace sf {
 
-class IButton : public Drawable, public Transformable
+class IWidget : virtual public Drawable, virtual public Transformable
 {
 public:
-    virtual ~IButton() {};
+    virtual ~IWidget() {};
     /* call back evocation */
     virtual void on_pressed() const = 0;
     virtual void on_released() const = 0;

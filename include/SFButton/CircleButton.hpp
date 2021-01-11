@@ -7,16 +7,15 @@ namespace sf
 {
 struct ConfigData;
 
-class CircleButton : public IButton
+class CircleButton : public IWidget
 {
     virtual void draw (RenderTarget &target, RenderStates states) const override; 
     std::function<void()> on_pressed_call_back_;
     std::function<void()> on_released_call_back_;
-    std::shared_ptr<ConfigData> config_;
     sf::CircleShape circle_;
 
 public:
-    CircleButton(std::shared_ptr<ConfigData> config);
+    CircleButton();
     virtual ~CircleButton();
 
     /* call back evocation */

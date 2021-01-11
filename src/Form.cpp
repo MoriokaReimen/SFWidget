@@ -4,9 +4,11 @@
 
 namespace sf
 {
+extern ConfigData config;
+
 void Form::draw(RenderTarget &target, RenderStates states) const
 {
-    for(const auto& button : buttons_)
+    for(const auto& button : widgets_)
     {
         target.draw(*button.get(), states);
     }
@@ -14,13 +16,13 @@ void Form::draw(RenderTarget &target, RenderStates states) const
 }
 
 Form::Form()
-    : buttons_(), config_(std::make_shared<ConfigData>())
+    : widgets_(), config_(std::make_shared<ConfigData>())
 {
 }
 
 void Form::process_events(const sf::Event& event)
 {
-    for(const auto& button : buttons_)
+    for(const auto& button : widgets_)
     {
         const auto& pos = sf::Vector2f(event.mouseMove.x, event.mouseMove.y);
         if(button->is_hovering(pos) and (event.type== event.MouseButtonPressed))
@@ -35,13 +37,13 @@ void Form::process_events(const sf::Event& event)
     }
 }
 
-void Form::add_button(std::shared_ptr<IButton> button)
+void Form::add_button(std::shared_ptr<IWidget> button)
 {
-    buttons_.push_back(button);
+    widgets_.push_back(button);
 }
 
-std::shared_ptr<ConfigData> Form::config()
+ConfigData& Form::get_config()
 {
-    return config_;
+    return config;
 }
 };

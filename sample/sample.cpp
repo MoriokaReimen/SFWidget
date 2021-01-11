@@ -12,7 +12,7 @@ int main()
 
     sf::RenderWindow window(sf::VideoMode(1600, 1200), "SFPlot-Sample", sf::Style::Default, settings);
     sf::Form form;
-    auto button = std::make_shared<sf::CircleButton>(form.config());
+    auto button = std::make_shared<sf::CircleButton>();
     button->set_on_pressed_call_back([](){std::cout << "Hello" << std::endl;});
     form.add_button(button);
 

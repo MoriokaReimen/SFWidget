@@ -8,7 +8,7 @@ namespace sf
 {
 struct ConfigData;
 
-class RectangleButton : public IButton
+class RectangleButton : public IWidget
 {
     virtual void draw (RenderTarget &target, RenderStates states) const override; 
     std::function<void()> on_pressed_call_back_;

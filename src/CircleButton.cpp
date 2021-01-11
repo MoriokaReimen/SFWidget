@@ -8,8 +8,8 @@ void CircleButton::draw(RenderTarget &target, RenderStates states) const
     target.draw(circle_, states);
 } 
 
-CircleButton::CircleButton(std::shared_ptr<ConfigData> config)
-    : on_pressed_call_back_(), on_released_call_back_(), config_(config)
+CircleButton::CircleButton()
+    : on_pressed_call_back_(), on_released_call_back_()
 {
 }
 
