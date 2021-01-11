@@ -11,12 +11,14 @@ int main()
     sf::ContextSettings settings;
 
     sf::RenderWindow window(sf::VideoMode(1600, 1200), "SFPlot-Sample", sf::Style::Default, settings);
+
     sf::Form form(window);
+    form.get_config().texture.loadFromFile("resource/Texture.png"); 
     auto circle_button = std::make_shared<sf::CircleButton>(20.f);
     circle_button->set_on_pressed_call_back([](){std::cout << "Hello" << std::endl;});
     circle_button->setPosition(500, 500);
     form.add_button(circle_button);
-    auto rectangle_button = std::make_shared<sf::RectangleButton>(sf::Vector2f{10.f, 10.f});
+    auto rectangle_button = std::make_shared<sf::RectangleButton>(sf::Vector2f{200.f, 200.f});
     rectangle_button->set_on_pressed_call_back([](){std::cout << "Bye" << std::endl;});
     rectangle_button->setPosition(200, 200);
     form.add_button(rectangle_button);

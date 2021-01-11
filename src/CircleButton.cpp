@@ -2,6 +2,8 @@
 #include "SFButton/ConfigData.hpp"
 #include <iostream>
 namespace sf {
+extern ConfigData config; /* Implemented in ConfigData.cpp */
+
 void CircleButton::draw(RenderTarget &target, RenderStates states) const
 {
     states.transform *= getTransform();
@@ -11,6 +13,16 @@ void CircleButton::draw(RenderTarget &target, RenderStates states) const
 CircleButton::CircleButton(const float& radius)
     : on_pressed_call_back_(), on_released_call_back_(), shape_(radius)
 {
+    text_.setFont(config.font);
+    text_.setFillColor(config.font_color);
+    text_.setCharacterSize(20);
+
+    /* Check if the texture loaded */
+    if(config.texture.getSize() != sf::Vector2u(0u, 0u))
+    {
+        shape_.setTexture(&config.texture);
+        shape_.setTextureRect(sf::IntRect(0, 50, 50, 50));
+    }
 }
 
 CircleButton::~CircleButton()
@@ -22,7 +34,12 @@ void CircleButton::on_pressed()
 {
     if(on_pressed_call_back_)
     on_pressed_call_back_();
-    shape_.setFillColor(sf::Color::Red);
+    if(config.texture.getSize() != sf::Vector2u(0u, 0u))
+    {
+        shape_.setTextureRect(sf::IntRect(50, 50, 50, 50));
+    } else {
+        shape_.setFillColor(sf::Color::Red);
+    }
 }
 
 void CircleButton::on_released()
@@ -30,6 +47,12 @@ void CircleButton::on_released()
     if(on_released_call_back_)
     on_released_call_back_();
     shape_.setFillColor(sf::Color::White);
+    if(config.texture.getSize() != sf::Vector2u(0u, 0u))
+    {
+        shape_.setTextureRect(sf::IntRect(0, 50, 50, 50));
+    } else {
+        shape_.setFillColor(sf::Color::White);
+    }
 }
 
 /* call back setter */

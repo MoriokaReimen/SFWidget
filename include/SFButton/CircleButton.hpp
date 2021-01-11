@@ -14,6 +14,7 @@ class CircleButton : public IWidget
     std::function<void()> on_released_call_back_;
 
     sf::CircleShape shape_;
+    sf::Text text_;
 public:
     explicit CircleButton(const float& radius = 0.f);
     virtual ~CircleButton();
