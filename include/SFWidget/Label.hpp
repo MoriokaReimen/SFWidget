@@ -1,26 +1,27 @@
 #pragma once
-
-#include "SFButton/IWidget.hpp"
 #include <memory>
+
+#include "SFWidget/IWidget.hpp"
+#include "SFWidget/ConfigData.hpp"
 
 namespace sf
 {
 struct ConfigData;
 
-class CircleButton : public IWidget
+class Label : public IWidget
 {
     virtual void draw (RenderTarget &target, RenderStates states) const override; 
     std::function<void()> on_pressed_call_back_;
     std::function<void()> on_released_call_back_;
-
-    sf::CircleShape shape_;
+    sf::RectangleShape shape_;
     sf::Text text_;
-public:
-    explicit CircleButton(const float& radius = 0.f);
-    virtual ~CircleButton();
 
-    /* text handling */
-    void set_text(const std::string& text);
+public:
+    explicit Label(const sf::Vector2f& size = sf::Vector2f(0, 0));
+    virtual ~Label();
+
+    /* text function */
+    void set_text(const std::string& text, const bool& adjust_shape = false);
     std::string get_text() const;
 
     /* call back evocation */

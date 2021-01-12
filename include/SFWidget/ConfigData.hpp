@@ -16,5 +16,6 @@ struct ConfigData
 
     sf::Texture texture;
     sf::Vector2u sprite_size;
+    ConfigData();
 };
 };

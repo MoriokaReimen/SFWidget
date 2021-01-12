@@ -1,9 +1,9 @@
-#include "SFButton/Form.hpp"
-#include "SFButton/ConfigData.hpp"
-#include "SFButton/IWidget.hpp"
-#include "SFButton/Label.hpp"
-#include "SFButton/CircleButton.hpp"
-#include "SFButton/RectangleButton.hpp"
+#include "SFWidget/Form.hpp"
+#include "SFWidget/ConfigData.hpp"
+#include "SFWidget/IWidget.hpp"
+#include "SFWidget/Label.hpp"
+#include "SFWidget/CircleButton.hpp"
+#include "SFWidget/RectangleButton.hpp"
 
 namespace sf
 {

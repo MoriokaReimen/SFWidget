@@ -1,14 +1,14 @@
 #pragma once
 #include <memory>
 
-#include "SFButton/IWidget.hpp"
-#include "SFButton/ConfigData.hpp"
+#include "SFWidget/IWidget.hpp"
+#include "SFWidget/ConfigData.hpp"
 
 namespace sf
 {
 struct ConfigData;
 
-class Label : public IWidget
+class RectangleButton : public IWidget
 {
     virtual void draw (RenderTarget &target, RenderStates states) const override; 
     std::function<void()> on_pressed_call_back_;
@@ -17,8 +17,8 @@ class Label : public IWidget
     sf::Text text_;
 
 public:
-    explicit Label(const sf::Vector2f& size = sf::Vector2f(0, 0));
-    virtual ~Label();
+    explicit RectangleButton(const sf::Vector2f& size = sf::Vector2f(0, 0));
+    virtual ~RectangleButton();
 
     /* text function */
     void set_text(const std::string& text, const bool& adjust_shape = false);

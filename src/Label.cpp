@@ -1,5 +1,5 @@
-#include "SFButton/Label.hpp"
-#include "SFButton/ConfigData.hpp"
+#include "SFWidget/Label.hpp"
+#include "SFWidget/ConfigData.hpp"
 #include <cassert>
 
 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(SFButton)
+project(SFWidget)
 
 ###################################################################
 # Option Setting
@@ -24,15 +24,15 @@ set(CMAKE_CXX_STANDARD 17)
 
 ###################################################################
 # Configure build for SFGraphing library
-file(GLOB SFBUTTON_SRC src/*.cpp)
-add_library(SFButton STATIC ${SFBUTTON_SRC} )
-target_link_libraries(SFButton PUBLIC sfml-graphics sfml-window sfml-system)
-target_include_directories(SFButton PUBLIC include/)
+file(GLOB SFWidget_SRC src/*.cpp)
+add_library(SFWidget STATIC ${SFWidget_SRC} )
+target_link_libraries(SFWidget PUBLIC sfml-graphics sfml-window sfml-system)
+target_include_directories(SFWidget PUBLIC include/)
 
 ###################################################################
 # Configure build for Sample program
 if(ENABLE_SAMPLE)
 file(GLOB SAMPLE_SRC sample/*.cpp)
 add_executable(sample ${SAMPLE_SRC})
-target_link_libraries(sample SFButton)
+target_link_libraries(sample SFWidget)
 endif()

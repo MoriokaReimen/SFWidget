@@ -1,5 +1,5 @@
-#include "SFButton/RectangleButton.hpp"
-#include "SFButton/ConfigData.hpp"
+#include "SFWidget/RectangleButton.hpp"
+#include "SFWidget/ConfigData.hpp"
 
 
 namespace sf {

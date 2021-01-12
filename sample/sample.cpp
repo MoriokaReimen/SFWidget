@@ -4,7 +4,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
-#include <SFButton/SFWidget.hpp>
+#include <SFWidget/SFWidget.hpp>
 
 int main()
 {
@@ -13,30 +13,25 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1600, 1200), "SFPlot-Sample", sf::Style::Default, settings);
 
     sf::Form form(window);
-    form.config().texture.loadFromFile("resource/Texture.png");
-    // form.config().texture.setSmooth(true);
-    form.config().sprite_size = sf::Vector2u(200u, 200u);
-    form.config().button_font.loadFromFile("resource/digital-7.ttf");
-    form.config().button_font_size = 50;
-    form.config().button_font_released_color = sf::Color(0, 0, 0);
-    form.config().button_font_pressed_color = sf::Color(255, 255, 0);
-
-    form.config().label_font.loadFromFile("resource/ipamjm.ttf");
-    form.config().label_font_size = 60;
-    form.config().label_font_color=sf::Color(0, 0, 0);
 
     auto circle_button = form.add_circle_button(20.f);
-    circle_button->set_on_pressed_call_back([](){std::cout << "Hello" << std::endl;});
+    circle_button->set_on_pressed_call_back([]()
+    {
+        std::cout << "Hello" << std::endl;
+    });
     circle_button->setPosition(500, 500);
     circle_button->set_text("Hello!!");
 
 
     auto rectangle_button = form.add_rectangle_button(sf::Vector2f{200.f, 200.f});
-    rectangle_button->set_on_pressed_call_back([](){std::cout << "Bye" << std::endl;});
+    rectangle_button->set_on_pressed_call_back([]()
+    {
+        std::cout << "Bye" << std::endl;
+    });
     rectangle_button->setPosition(200, 200);
     rectangle_button->set_text("Bye!!");
 
-    auto label = form.add_label(sf::Vector2f{100.f,100.f});
+    auto label = form.add_label(sf::Vector2f{100.f, 100.f});
     label->set_text("Power Management");
     form.add_widget(label);
 

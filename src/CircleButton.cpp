@@ -1,5 +1,5 @@
-#include "SFButton/CircleButton.hpp"
-#include "SFButton/ConfigData.hpp"
+#include "SFWidget/CircleButton.hpp"
+#include "SFWidget/ConfigData.hpp"
 #include <iostream>
 namespace sf {
 extern ConfigData config; /* Implemented in ConfigData.cpp */
