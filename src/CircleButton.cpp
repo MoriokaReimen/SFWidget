@@ -17,9 +17,9 @@ void CircleButton::draw(RenderTarget &target, RenderStates states) const
 CircleButton::CircleButton(const float& radius)
     : on_pressed_call_back_(), on_released_call_back_(), shape_(radius)
 {
-    text_.setFont(config.font);
-    text_.setFillColor(config.font_released_color);
-    text_.setCharacterSize(config.font_size);
+    text_.setFont(config.button_font);
+    text_.setFillColor(config.button_font_released_color);
+    text_.setCharacterSize(config.button_font_size);
 
     /* Check if the texture loaded */
     if(config.texture.getSize() != sf::Vector2u(0u, 0u))
@@ -64,7 +64,7 @@ void CircleButton::on_pressed()
 
     if(!text_.getString().isEmpty())
     {
-        text_.setFillColor(config.font_pressed_color);
+        text_.setFillColor(config.button_font_pressed_color);
     }
 }
 
@@ -82,7 +82,7 @@ void CircleButton::on_released()
 
     if(!text_.getString().isEmpty())
     {
-        text_.setFillColor(config.font_released_color);
+        text_.setFillColor(config.button_font_released_color);
     }
 }
 

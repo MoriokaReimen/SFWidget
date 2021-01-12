@@ -45,7 +45,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
      inkscape:cx="70.805638"
-     inkscape:cy="97.527037"
+     inkscape:cy="198.54229"
      inkscape:document-units="px"
      inkscape:current-layer="g870-6"
      inkscape:document-rotation="0"
@@ -76,32 +76,53 @@
        id="g870-6"
        transform="translate(12.585586,54.007681)">
       <rect
-         style="fill:#ffbf00;fill-opacity:1;stroke:#ffbf00;stroke-width:2.53205;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"
+         style="fill:#ffff00;fill-opacity:1;stroke:#fffb00;stroke-width:2.53205;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"
          id="rect841"
          width="23.926281"
          height="23.926287"
          x="-11.319561"
          y="-52.741657" />
       <rect
-         style="fill:#000000;fill-opacity:1;stroke:#ffbf00;stroke-width:0.811933;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         style="fill:#000000;fill-opacity:1;stroke:#ffff00;stroke-width:0.811933;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
          id="rect841-3"
          width="25.6464"
          height="25.6464"
          x="14.278712"
          y="-53.601715" />
       <ellipse
-         style="fill:#ffbf00;fill-opacity:1;stroke:#ffbf00;stroke-width:1.25993;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         style="fill:#fffb00;fill-opacity:1;stroke:#ffff00;stroke-width:1.25993;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
          id="path858"
          cy="-14.320184"
          cx="0.64357996"
          rx="12.599205"
          ry="12.599203" />
       <circle
-         style="fill:#000000;fill-opacity:1;stroke:#ffbf00;stroke-width:0.807986;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         style="fill:#000000;fill-opacity:1;stroke:#ffff00;stroke-width:0.807986;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
          id="path858-6"
          cy="-14.320183"
          cx="27.101912"
          r="12.825173" />
+      <rect
+         style="fill:#ffff00;fill-opacity:1;stroke:#ffff00;stroke-width:2.53206237;stroke-linejoin:miter;stroke-opacity:1;paint-order:fill markers stroke;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect841-36"
+         width="23.926279"
+         height="23.926287"
+         x="-11.319561"
+         y="0.17500795" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.265633;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect841-36-7"
+         width="0.26458332"
+         height="23.812498"
+         x="-11.527253"
+         y="0.2318996" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.265634;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+         id="rect841-36-7-5"
+         width="0.26458332"
+         height="23.812496"
+         x="12.814413"
+         y="0.2318996" />
     </g>
   </g>
 </svg>

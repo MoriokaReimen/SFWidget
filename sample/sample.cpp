@@ -16,10 +16,14 @@ int main()
     form.config().texture.loadFromFile("resource/Texture.png");
     form.config().texture.setSmooth(true);
     form.config().sprite_size = sf::Vector2u(100u, 100u);
-    form.config().font.loadFromFile("resource/digital-7.ttf");
-    form.config().font_size = 50;
-    form.config().font_released_color = sf::Color(0, 0, 0);
-    form.config().font_pressed_color = sf::Color(255, 191, 0);
+    form.config().button_font.loadFromFile("resource/digital-7.ttf");
+    form.config().button_font_size = 50;
+    form.config().button_font_released_color = sf::Color(0, 0, 0);
+    form.config().button_font_pressed_color = sf::Color(255, 255, 0);
+
+    form.config().label_font.loadFromFile("resource/ipamjm.ttf");
+    form.config().label_font_size = 60;
+    form.config().label_font_color=sf::Color(0, 0, 0);
 
     auto circle_button = std::make_shared<sf::CircleButton>(20.f);
     circle_button->set_on_pressed_call_back([](){std::cout << "Hello" << std::endl;});
@@ -32,6 +36,10 @@ int main()
     rectangle_button->setPosition(200, 200);
     rectangle_button->set_text("Bye!!");
     form.add_button(rectangle_button);
+
+    auto label = std::make_shared<sf::Label>(sf::Vector2f{100.f,100.f});
+    label->set_text("Power Management");
+    form.add_button(label);
 
     while (window.isOpen())
     {

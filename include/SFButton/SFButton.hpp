@@ -4,3 +4,4 @@
 #include "CircleButton.hpp"
 #include "RectangleButton.hpp"
 #include "ConfigData.hpp"
+#include "Label.hpp"
