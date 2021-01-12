@@ -7,6 +7,9 @@
 namespace sf
 {
 class IWidget;
+class Label;
+class RectangleButton;
+class CircleButton;
 struct ConfigData;
 
 class Form : public sf::Drawable
@@ -19,7 +22,10 @@ class Form : public sf::Drawable
 public:
     Form(sf::RenderWindow& window);
     void process_events(const sf::Event&);
-    void add_button(std::shared_ptr<IWidget> button);
+    void add_widget(std::shared_ptr<IWidget> widget);
+    std::shared_ptr<Label> add_label(const sf::Vector2f& size = sf::Vector2f(0, 0));
+    std::shared_ptr<CircleButton> add_circle_button(const float& radius = 0.f);
+    std::shared_ptr<RectangleButton> add_rectangle_button(const sf::Vector2f& size = sf::Vector2f(0, 0));
     ConfigData& config();
 };
 

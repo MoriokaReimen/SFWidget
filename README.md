@@ -1,14 +1,15 @@
-SFButton
+SFWidget
 =================================
-SFML button library
+SFML minimal widget library
 
 ![Sample.png](doc/Sample.png)
 
 # Description
-Button library based on SFML multimedia library.
+Widget library based on SFML multimedia library.
 SFPlot supports
 1. Circle Button
 2. Rectangle Button
+3. Label
 
 # Requirement
 * SFML library
