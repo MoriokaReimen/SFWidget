@@ -3,7 +3,9 @@
 #include "SFWidget/IWidget.hpp"
 #include "SFWidget/Label.hpp"
 #include "SFWidget/CircleButton.hpp"
+#include "SFWidget/CircleToggle.hpp"
 #include "SFWidget/RectangleButton.hpp"
+#include "SFWidget/RectangleToggle.hpp"
 
 namespace sf
 {
@@ -19,7 +21,7 @@ void Form::draw(RenderTarget &target, RenderStates states) const
 }
 
 Form::Form(sf::RenderWindow& window)
-    : widgets_(), config_(std::make_shared<ConfigData>()), window_(window)
+    : widgets_(), window_(window)
 {
 }
 
@@ -59,11 +61,25 @@ std::shared_ptr<CircleButton> Form::add_circle_button(const float& radius)
     return circle_button;
 }
 
+std::shared_ptr<CircleToggle> Form::add_circle_toggle(const float& radius)
+{
+    auto circle_toggle = std::make_shared<CircleToggle>(radius);
+    add_widget(circle_toggle);
+    return circle_toggle;
+}
+
 std::shared_ptr<RectangleButton> Form::add_rectangle_button(const sf::Vector2f& size)
 {
     auto rectangle_button = std::make_shared<RectangleButton>(size);
     add_widget(rectangle_button);
     return rectangle_button;
+}
+
+std::shared_ptr<RectangleToggle> Form::add_rectangle_toggle(const sf::Vector2f& size)
+{
+    auto rectangle_toggle = std::make_shared<RectangleToggle>(size);
+    add_widget(rectangle_toggle);
+    return rectangle_toggle;
 }
 
 ConfigData& Form::config()

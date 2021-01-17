@@ -31,6 +31,20 @@ int main()
     rectangle_button->setPosition(200, 200);
     rectangle_button->set_text("Bye!!");
 
+    auto rectangle_toggle = form.add_rectangle_toggle(sf::Vector2f{50.f, 50.f});
+    rectangle_toggle->set_on_pressed_call_back([]()
+    {
+        std::cout << "5V" << std::endl;
+    });
+    rectangle_toggle->setPosition(300, 300);
+
+    auto circle_toggle = form.add_circle_toggle(20.f);
+    circle_toggle->set_on_pressed_call_back([]()
+    {
+        std::cout << "3V" << std::endl;
+    });
+    circle_toggle->setPosition(500, 300);
+
     auto label = form.add_label(sf::Vector2f{100.f, 100.f});
     label->set_text("Power Management");
     form.add_widget(label);
