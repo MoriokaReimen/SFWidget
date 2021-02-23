@@ -35,7 +35,7 @@ void Form::process_events(const sf::Event& event)
             button->on_pressed();
         }
 
-        if(button->is_hovering(pos) and (event.type == event.MouseButtonReleased))
+        if(event.type == event.MouseButtonReleased)
         {
             button->on_released();
         }      
