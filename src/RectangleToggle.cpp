@@ -54,6 +54,11 @@ void RectangleToggle::on_released()
     }
 }
 
+void RectangleToggle::on_text_entered(const sf::Uint32& ch)
+{
+    /* Do nothing */
+}
+
 /* call back setter */
 void RectangleToggle::set_on_pressed_call_back(const std::function<void()>& func)
 {

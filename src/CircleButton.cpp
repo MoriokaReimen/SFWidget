@@ -86,6 +86,11 @@ void CircleButton::on_released()
     }
 }
 
+void CircleButton::on_text_entered(const sf::Uint32& ch)
+{
+    /* do nothing */
+}
+
 /* call back setter */
 void CircleButton::set_on_pressed_call_back(const std::function<void()>& func)
 {

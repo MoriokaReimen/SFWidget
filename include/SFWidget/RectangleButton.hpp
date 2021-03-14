@@ -27,6 +27,7 @@ public:
     /* call back evocation */
     virtual void on_pressed() override;
     virtual void on_released() override;
+    virtual void on_text_entered(const sf::Uint32& ch) override;
 
     /* call back setter */
     virtual void set_on_pressed_call_back(const std::function<void()>& func) override;

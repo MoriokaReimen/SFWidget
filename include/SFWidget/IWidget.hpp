@@ -11,6 +11,7 @@ public:
     /* call back evocation */
     virtual void on_pressed() = 0;
     virtual void on_released() = 0;
+    virtual void on_text_entered(const sf::Uint32& ch) = 0;
 
     /* call back setter */
     virtual void set_on_pressed_call_back(const std::function<void()>& func) = 0;

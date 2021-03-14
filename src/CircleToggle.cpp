@@ -52,6 +52,11 @@ void CircleToggle::on_released()
     }
 }
 
+void CircleToggle::on_text_entered(const sf::Uint32& ch)
+{
+    /* do nothing */
+}
+
 /* call back setter */
 void CircleToggle::set_on_pressed_call_back(const std::function<void()>& func)
 {

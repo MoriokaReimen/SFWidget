@@ -35,4 +35,7 @@ if(ENABLE_SAMPLE)
 file(GLOB SAMPLE_SRC sample/*.cpp)
 add_executable(sample ${SAMPLE_SRC})
 target_link_libraries(sample SFWidget)
+# Copy resource to binary directory
+add_custom_command(TARGET sample POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_CURRENT_SOURCE_DIR}/resource/" "${CMAKE_BINARY_DIR}/resource")  
 endif()

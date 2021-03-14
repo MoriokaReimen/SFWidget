@@ -63,6 +63,11 @@ void Label::on_released()
     /* Do nothing */
 }
 
+void Label::on_text_entered(const sf::Uint32& ch)
+{
+    /* Do nothing */
+}
+
 /* call back setter */
 void Label::set_on_pressed_call_back(const std::function<void()>& func)
 {

@@ -30,15 +30,20 @@ void Form::process_events(const sf::Event& event)
     for(const auto& button : widgets_)
     {
         const auto pos = sf::Vector2f(window_.mapPixelToCoords(sf::Mouse::getPosition(window_)));
-        if(button->is_hovering(pos) and (event.type== event.MouseButtonPressed))
+        if(button->is_hovering(pos) and (event.type== sf::Event::MouseButtonPressed))
         {
             button->on_pressed();
         }
 
-        if(event.type == event.MouseButtonReleased)
+        if(event.type == sf::Event::MouseButtonReleased)
         {
             button->on_released();
-        }      
+        }
+
+        if(event.type == sf::Event::TextEntered)
+        {
+            button->on_text_entered(event.text.unicode);
+        }
     }
 }
 

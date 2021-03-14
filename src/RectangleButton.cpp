@@ -86,6 +86,11 @@ void RectangleButton::on_released()
     }
 }
 
+void RectangleButton::on_text_entered(const sf::Uint32& ch)
+{
+    /* Do nothing */
+}
+
 /* call back setter */
 void RectangleButton::set_on_pressed_call_back(const std::function<void()>& func)
 {
